@@ -9,9 +9,9 @@ export class NavComponent {
 constructor(public modal:ModalService)
 {}
 
-openModal($event: Event){
+openModal($event: Event){  
 
   $event.preventDefault();  
-  this.modal.toggleModal();
+  this.modal.toggleModal('auth');
 }
 }
