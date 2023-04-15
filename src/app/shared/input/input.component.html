@@ -1,0 +1,47 @@
+<input [formControl]="control"
+[type]="type"
+class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+[placeholder]="placeholder"
+/>
+
+
+<ng-container  *ngIf="control.dirty &&
+control.touched" >
+
+    <p class="text-red-500"
+    *ngIf="
+     control.errors?.['required']">
+     Required</p>
+    <p class="text-red-500" *ngIf="
+    control.errors?.['minlength']">
+      the input value should be
+       {{control.errors?.['minlength'].requiredLength}} 
+       you entered
+        {{control.errors?.['minlength'].actualLength}}
+     </p>
+
+     <p class="text-red-500"
+     *ngIf="
+      control.errors?.['email']">
+     You must enter valid Email</p>
+     <p class="text-red-500"
+     *ngIf="
+      control.errors?.['min']">
+      The minimum required value is 
+      {{control.errors?.['min'].min}} 
+      you entered
+       {{control.errors?.['min'].actual}}</p>
+       <p class="text-red-500"
+       *ngIf="
+        control.errors?.['max']">
+        The maximum required value is 
+        {{control.errors?.['max'].max}} 
+        you entered
+         {{control.errors?.['max'].actual}}</p>
+
+
+         <p class="text-red-500"
+         *ngIf="
+          control.errors?.['pattern']">
+          Password must be at least 8 characters long, 1 upper case , 1 lower case and 1 number</p>
+</ng-container>
