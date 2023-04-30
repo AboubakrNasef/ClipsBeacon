@@ -14,16 +14,14 @@ export class ManageComponent implements OnInit {
   videoOrder = '1';
   clips: IClip[] = [];
   activeClip: IClip | null = null;
-sort$ : BehaviorSubject<string>
+  sort$: BehaviorSubject<string>;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private clipService: ClipService,
     private modal: ModalService
   ) {
-    this.sort$ = new BehaviorSubject(this.videoOrder)
-
-    
+    this.sort$ = new BehaviorSubject(this.videoOrder);
   }
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((params: Params) => {
@@ -35,7 +33,7 @@ sort$ : BehaviorSubject<string>
       docs.forEach((doc) => this.clips.push({ docID: doc.id, ...doc.data() }));
     });
   }
- 
+
   sort(event: Event) {
     const { value } = event.target as HTMLSelectElement;
     this.router.navigate([], {
@@ -62,13 +60,23 @@ sort$ : BehaviorSubject<string>
   deleteClip($event: Event, clip: IClip) {
     $event.preventDefault();
 
-    this.clipService.deleteClip(clip)
+    this.clipService.deleteClip(clip);
 
-    this.clips.forEach((element,index)=>{
-      if (element.docID == clip.docID)
-      {
-        this.clips.splice(index,1)
+    this.clips.forEach((element, index) => {
+      if (element.docID == clip.docID) {
+        this.clips.splice(index, 1);
       }
-    })
+    });
+  }
+
+  async copyToClipboard($event: Event, docID: string | undefined) {
+    $event.preventDefault();
+
+    if (!docID) {
+      return;
+    }
+
+    const url = `${location.origin}/clip/${docID}`;
+    await navigator.clipboard.writeText(url);
   }
 }
