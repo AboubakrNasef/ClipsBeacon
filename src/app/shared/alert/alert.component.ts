@@ -6,10 +6,11 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent {
-@Input() color ='blue'
+@Input() color :string='blue'
 
-get bgColor()
+get bgColor():string
 {
+  console.log(`bg-${this.color}-400`);
   return `bg-${this.color}-400`;
 }
 }

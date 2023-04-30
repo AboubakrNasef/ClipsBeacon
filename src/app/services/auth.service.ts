@@ -15,12 +15,12 @@ private usersCollection :AngularFirestoreCollection<IUser>;
 public isAuthenticated$ :Observable<boolean>;
 public isAuthenticatedWithDelay$:Observable<boolean>;
 private redirect = false;
-  constructor(
-  private  auth:AngularFireAuth,
+  constructor
+  ( private  auth:AngularFireAuth,
   private  db:AngularFirestore,
   private router:Router,
-  private route : ActivatedRoute
-  ) { 
+  private route : ActivatedRoute )
+   { 
     this.usersCollection=db.collection('users')
     this.isAuthenticated$ = auth.user.pipe(
       map(user=>!!user)
@@ -32,8 +32,12 @@ private redirect = false;
       switchMap(route => route?.data?? of({}))
     
     ).subscribe(data => {
-      this.redirect = data?['authOnly'] ?? false
-    })
+if  (data === null )
+return;
+
+      this.redirect = data['authOnly'] ?? false 
+    }
+    )
   }
 
 public async createUser(userData:IUser){
