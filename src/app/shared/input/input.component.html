@@ -44,4 +44,12 @@ control.touched" >
          *ngIf="
           control.errors?.['pattern']">
           Password must be at least 8 characters long, 1 upper case , 1 lower case and 1 number</p>
+          <p class="text-red-500"
+          *ngIf="
+           control.errors?.['noMatch']">
+           Password do not match</p>
+           <p class="text-red-500"
+           *ngIf="
+            control.errors?.['emailTaken']">
+           Email is Taken</p>
 </ng-container>
