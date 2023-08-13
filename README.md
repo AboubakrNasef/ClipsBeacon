@@ -1,27 +1,17 @@
 # ClipsApp
+This App is for Sharing gaming videos with other people 
+its a complete full stack app with angular and firebase as a backend 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Main Page
+![scrnli_8_13_2023_11-09-45 PM](https://github.com/AboubakrNasef/ClipsBeacon/assets/105270767/9aeda20a-5478-4492-ac54-3ad53928533b)
 
-## Development server
+User Management
+![scrnli_8_13_2023_11-09-24 PM](https://github.com/AboubakrNasef/ClipsBeacon/assets/105270767/ab06c117-8938-408a-8ef4-d3995d798a24)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Video Player
+![scrnli_8_13_2023_11-10-21 PM](https://github.com/AboubakrNasef/ClipsBeacon/assets/105270767/e16c140a-7ca0-465a-96de-92d5f6d871c6)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
