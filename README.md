@@ -1,8 +1,18 @@
 # ClipsApp
 This App is for Sharing gaming videos with other people 
 its a complete full stack app with angular and firebase as a backend 
+ClipsBeacon is your Video sharing app  Seamlessly share your gaming shots with your friends.
 
-Main Page
+# Features
+- Sharing and playing videos
+- infinte scrolling
+- user management
+- angular Forms 
+
+# Link 
+https://clips-beacon.vercel.app/
+
+# Main Page
 ![scrnli_8_13_2023_11-09-45 PM](https://github.com/AboubakrNasef/ClipsBeacon/assets/105270767/9aeda20a-5478-4492-ac54-3ad53928533b)
 
 User Management
@@ -14,4 +24,11 @@ Video Player
 
 
 
+
+
+
+
+
+Aboubakr Nasef
+GitHub: @AboubakrNasef
 
